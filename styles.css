@@ -24,6 +24,10 @@ header h1 {
 	margin: 0;
 }
 
+img[data-testid="slackProfilePicture"] {
+    border-radius: 50%; /* Make the image circular */
+}
+
 main {
 	display: flex;
 	flex-direction: column;
@@ -33,7 +37,7 @@ main {
 
 .goals-container {
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	justify-content: center;
 }
 
@@ -43,6 +47,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+    min-width: 45%;
 }
 
 .goals-list {
@@ -62,10 +67,40 @@ main {
 .goals-list li {
 	margin-bottom: 1em;
 }
-.links{
-    display: flex;
-}
+#usefulLinks {
+    background-color: #f7f7f7;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+  }
+  
+  #usefulLinks p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
 
+  #links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  #links li {
+    margin-right: 20px;
+  }
+  
+  #links a {
+    text-decoration: underline;
+    color: #337ab7;
+  }
+  
+  #links a:hover {
+    color: #23527c;
+  }
 a {
 	color: #337ab7;
 	text-decoration: underline;
