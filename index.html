@@ -9,12 +9,15 @@
   <body>
     <!-- Header section -->
     <header>
-      <h1 data-testid="jhoy">Jhoy</h1>
+      <h1 data-testid="slackDisplayName">Jhoy</h1>
       <img
         data-testid="slackProfilePicture"
         src="images/profilepix_200_by_200.jpg"
         alt="My Slack Profile Picture"
       />
+      <p data-testid="slackEmail">
+        omalejoy83@gmail.com
+      </p>
       <div class="header-info">
         <span data-testid="currentDay"></span>
         <span data-testid="currentTimeUTC"></span>
@@ -102,7 +105,7 @@
         <li>
             <span>Tech Skills Training: </span>
           <a
-            data-testid="http://hng.tech/learn"
+            data-testid="hngLink"
             href="http://hng.tech/learn"
             target="_blank"
             >HNG Learn</a
@@ -111,7 +114,7 @@
         <li>
             <span>Keyword Research Tool:</span>
           <a
-            data-testid="http://keyword.dog/"
+            data-testid="keywordLink"
             href="http://keyword.dog/"
             target="_blank"
             >Keyword Dog </a
@@ -121,7 +124,7 @@
             <span>Web Scrapping Tool: </span>
             
           <a
-            data-testid="http://scrapeanyweb.site/"
+            data-testid="scrapeanywebLink"
             href="http://scrapeanyweb.site/"
             target="_blank"
             >Scrape Any Web</a
@@ -130,12 +133,7 @@
       </ul>
     </section>
 
-    <!-- Footer section -->
-    <footer>
-      <p data-testid="omalejoy83@gmail.com">
-        contact me @ omalejoy83@gmail.com
-      </p>
-    </footer>
+    
 
     <!-- Script tag for JavaScript file -->
     <script src="script.js"></script>
