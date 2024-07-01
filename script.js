@@ -1,7 +1,24 @@
 setInterval(() => {
-    const now = new Date();
-    const day = now.toLocaleString("en-US", { weekday: "long", month: "short", day: "numeric", year: "numeric" });
-    const time = now.toLocaleString("en-US", { hour: "numeric", minute: "numeric", second: "numeric", hour12: true, timeZoneName: "short" , timeZone:'UTC'});
-    document.querySelector("[data-testid='currentDay']").innerText = day;
-    document.querySelector("[data-testid='currentTimeUTC']").innerText = time;
-  }, 1000); 
+  const now = new Date();
+
+  const timeOptions = {
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+    hour12: true, // 12-hour format
+    timeZone: "UTC",
+  };
+  const currentUTCTime = now.toLocaleTimeString("en-US", timeOptions) + " UTC";
+
+  const dayOptions = {
+    weekday: "long",
+    timeZone: "UTC",
+  };
+  const currentUTCDate = now.toLocaleDateString("en-US", dayOptions);
+
+  // Update the elements in the DOM
+  document.querySelector("[data-testid='currentDay']").innerText =
+    currentUTCDate;
+  document.querySelector("[data-testid='currentTimeUTC']").innerText =
+    currentUTCTime;
+}, 1000);
